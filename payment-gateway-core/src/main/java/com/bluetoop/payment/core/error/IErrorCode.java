@@ -15,13 +15,21 @@ import lombok.Getter;
 @Getter
 public enum IErrorCode {
     /**
+     * 成功
+     */
+    SUCCESS(0, "SUCCESS."),
+    /**
      * 系统异常
      */
     SYSTEM_ERROR(9999, "System error."),
     /**
      * 支付异常
      */
-    PAYMENT_ERROR(1001, "pay error.");
+    PAYMENT_ERROR(1001, "pay error."),
+    /**
+     * 支付异常
+     */
+    INVALID_PARAMS_ERROR(1002, "invalid params.");
 
     /**
      * 错误码

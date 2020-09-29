@@ -16,5 +16,52 @@ import lombok.Setter;
 @Getter
 @Setter
 public class PaymentException extends RuntimeException {
+
+    /**
+     * 错误码
+     */
     private IErrorCode errorCode;
+
+    /**
+     * 构造方法
+     *
+     * @param errorCode
+     */
+    public PaymentException(IErrorCode errorCode) {
+        this.errorCode = errorCode;
+    }
+
+    /**
+     * 构造方法
+     *
+     * @param message
+     * @param errorCode
+     */
+    public PaymentException(String message, IErrorCode errorCode) {
+        super(message);
+        this.errorCode = errorCode;
+    }
+
+    /**
+     * 构造方法
+     *
+     * @param message
+     * @param cause
+     * @param errorCode
+     */
+    public PaymentException(String message, Throwable cause, IErrorCode errorCode) {
+        super(message, cause);
+        this.errorCode = errorCode;
+    }
+
+    /**
+     * 构造方法
+     *
+     * @param cause
+     * @param errorCode
+     */
+    public PaymentException(Throwable cause, IErrorCode errorCode) {
+        super(cause);
+        this.errorCode = errorCode;
+    }
 }

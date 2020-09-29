@@ -1,0 +1,20 @@
+server:
+  port: ${port:28080}
+logging:
+  config: classpath:log4j.xml
+wechart:
+  miniapp:
+    configs:
+      - appid: wx3d9323096748cc7c
+        appSecret: 19f0d66158c304dbf86f978dad30d4d1
+        token: #微信小程序消息服务器配置的token
+        aesKey: #微信小程序消息服务器配置的EncodingAESKey
+        msgDataFormat: JSON
+  # 公众号相关配置
+  account:
+    configs:
+      - appId: wx3d9323096748cc7a
+        appSecret: 19f0d66158c304dbf86f978dad30d4d1
+        token: #微信小程序消息服务器配置的token
+        aeskey: #微信小程序消息服务器配置的EncodingAESKey
+        oauth: http://www.baidu.com/%s
