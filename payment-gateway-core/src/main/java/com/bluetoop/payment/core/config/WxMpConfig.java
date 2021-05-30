@@ -10,8 +10,8 @@
  */
 package com.bluetoop.payment.core.config;
 
-import com.bluetoop.payment.core.error.IErrorCode;
-import com.bluetoop.payment.core.exception.PaymentException;
+import com.bluetoop.payment.core.cons.IErrorCode;
+import com.bluetoop.payment.core.cons.PaymentException;
 import com.bluetoop.payment.core.storage.InMemoryConfigStorage;
 import com.google.common.collect.Maps;
 import lombok.extern.slf4j.Slf4j;

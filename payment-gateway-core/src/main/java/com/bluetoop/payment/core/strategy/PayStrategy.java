@@ -3,7 +3,7 @@ package com.bluetoop.payment.core.strategy;
 import com.bluetoop.payment.core.storage.LocalConfigStorage;
 import com.bluetoop.payment.core.strategy.request.PayRequest;
 import com.bluetoop.payment.core.strategy.response.PayResponse;
-import com.bluetoop.payment.core.type.PayType;
+import com.bluetoop.payment.core.cons.type.PayType;
 
 /**
  * <支付策略抽象类>

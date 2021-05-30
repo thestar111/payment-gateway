@@ -1,4 +1,4 @@
-package com.bluetoop.payment.core.log;
+package com.bluetoop.payment.core.config;
 
 import com.bluetoop.payment.core.common.Result;
 import lombok.extern.slf4j.Slf4j;
@@ -31,7 +31,7 @@ public class Log {
     /**
      * 定义切入点
      */
-    @Pointcut("@annotation(com.bluetoop.payment.core.type.PrintLog)")
+    @Pointcut("@annotation(com.bluetoop.payment.core.cons.type.PrintLog)")
     public void point() {
     }
 

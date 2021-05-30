@@ -1,6 +1,7 @@
 package com.bluetoop.payment.api.pay.request;
 
 import com.bluetoop.payment.api.pay.domain.ProductInfo;
+import com.bluetoop.payment.core.cons.type.PayType;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -17,41 +18,28 @@ import java.math.BigDecimal;
  */
 @Data
 public class PayOrderRequest implements Serializable {
-    /**
-     * 订单ID
-     */
+
+    /** 订单ID */
     private String orderId;
-    /**
-     * 金额
-     */
+
+    /** 金额 */
     private BigDecimal amount;
-    /**
-     * 产品信息
-     */
+
+    /** 产品信息 */
     private ProductInfo productInfo;
-    /**
-     * 支付类型 JSAPI、MWEB、ALIWAP
-     * {@linkplain com.bluetoop.payment.core.type.PayType}
-     */
+
+    /** 支付类型 JSAPI、MWEB、ALIWAP {@linkplain PayType} */
     private String payType;
-    /**
-     * IP地址
-     */
+
+    /** IP地址 */
     private String ip;
 
-    /**
-     * 微信JSAPI支付必填
-     */
+    /** 微信JSAPI支付必填 */
     private String openId;
 
-    @Override
-    public String toString() {
-        final StringBuilder sb = new StringBuilder("PayOrderRequest{");
-        sb.append("orderId='").append(orderId).append('\'');
-        sb.append(", amount=").append(amount);
-        sb.append(", productInfo=").append(productInfo);
-        sb.append(", payType='").append(payType).append('\'');
-        sb.append('}');
-        return sb.toString();
-    }
+    /** 前端回调地址URL */
+    private String frontUrl;
+
+    /** 支付来源（1. PC/平板  2. Mobile） */
+    private String source;
 }

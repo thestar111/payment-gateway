@@ -43,7 +43,7 @@ public interface OAuthFacade {
      * @param state 微信回调URL
      * @return
      */
-    @GetMapping(value = {"/code/{appid}", "/code/{appid}/{cid}"})
+    @GetMapping(value = {"/code/{appid}"})
     void oauth(HttpServletRequest request, HttpServletResponse response,
                @PathVariable("appid") String appid,
                @RequestParam("code") String code,

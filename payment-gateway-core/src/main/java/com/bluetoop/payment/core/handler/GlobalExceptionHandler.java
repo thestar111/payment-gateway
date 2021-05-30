@@ -1,8 +1,8 @@
 package com.bluetoop.payment.core.handler;
 
 import com.bluetoop.payment.core.common.Result;
-import com.bluetoop.payment.core.error.IErrorCode;
-import com.bluetoop.payment.core.exception.PaymentException;
+import com.bluetoop.payment.core.cons.IErrorCode;
+import com.bluetoop.payment.core.cons.PaymentException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.apache.http.MethodNotSupportedException;

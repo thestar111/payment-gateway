@@ -17,40 +17,38 @@ import java.math.BigDecimal;
  */
 @Data
 public class PayRequest implements Serializable {
-    /**
-     * 外部订单ID
-     */
+
+    /** 商户后台订单ID */
     private String outOrderNo;
-    /**
-     * 订单金额：分
-     */
+
+    /** 订单金额：分 */
     private BigDecimal amount;
-    /**
-     * IP地址
-     */
+
+    /** IP地址 */
     private String ip;
-    /**
-     * 产品ID
-     */
+
+    /** 产品ID */
     private String productId;
-    /**
-     * 产品明天
-     */
+
+    /** 产品名称 */
     private String productName;
-    /**
-     * 名称
-     */
+
+    /** 名称 */
     private String attach;
-    /**
-     * 用户OPENID
-     */
+
+    /** 用户OPENID */
     private String openId;
-    /**
-     * WAP支付H5信息
-     */
+
+    /** WAP支付H5信息 */
     private H5_info h5_info;
-    /**
-     * 产品信息
-     */
+
+    /** 产品信息 */
     private String body;
+
+    /** 是否支持使用信用卡 */
+    private Boolean enableCredit;
+
+    /** 支付过期时间 （yyyyMMddHHmmss） */
+    private String expireTime;
+
 }

@@ -27,4 +27,6 @@ public interface PayOrderFacade {
      */
     @PostMapping(path = "/pay/v1")
     Result<PayResponse> pay(@RequestBody PayOrderRequest payOrderRequest);
+
+
 }

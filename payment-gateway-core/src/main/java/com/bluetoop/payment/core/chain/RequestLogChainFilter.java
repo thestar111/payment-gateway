@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.UUID;
 
 import static com.bluetoop.payment.core.cons.Constans.TRANCE_ID;
-import static com.bluetoop.payment.core.type.RequestHeader.X_REQUEST_ID;
+import static com.bluetoop.payment.core.cons.type.RequestHeader.X_REQUEST_ID;
 
 /**
  * <请求过滤器>

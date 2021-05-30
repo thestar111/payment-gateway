@@ -1,15 +1,15 @@
 package com.bluetoop.payment.core.pay;
 
 import cn.hutool.json.JSONUtil;
-import com.bluetoop.payment.core.error.IErrorCode;
-import com.bluetoop.payment.core.exception.PaymentException;
+import com.bluetoop.payment.core.cons.IErrorCode;
+import com.bluetoop.payment.core.cons.PaymentException;
 import com.bluetoop.payment.core.pay.domain.H5_info;
 import com.bluetoop.payment.core.pay.request.WxPayRequest;
 import com.bluetoop.payment.core.storage.LocalConfigStorage;
 import com.bluetoop.payment.core.strategy.PayStrategy;
 import com.bluetoop.payment.core.strategy.request.PayRequest;
 import com.bluetoop.payment.core.strategy.response.PayResponse;
-import com.bluetoop.payment.core.type.PayType;
+import com.bluetoop.payment.core.cons.type.PayType;
 import com.github.binarywang.wxpay.bean.order.WxPayMwebOrderResult;
 import com.github.binarywang.wxpay.constant.WxPayConstants;
 import com.github.binarywang.wxpay.exception.WxPayException;
@@ -71,14 +71,14 @@ public class WeChartWapPay extends PayStrategy<PayRequest, PayResponse> {
                 return payResponse;
             } else {
                 // 微信支付失败
-                throw new RuntimeException("微信支付失败");
+                throw new PaymentException("微信WAP支付失败", IErrorCode.WX_PAY_ERROR);
             }
         } catch (WxPayException e) {
-            log.error("【WeChartWapPay】 invoke pay failed. error : {}", ExceptionUtils.getRootCauseMessage(e));
-            throw new PaymentException("微信支付失败", IErrorCode.PAYMENT_ERROR);
+            log.error("【WeChartWapPay】 invoke wap pay failed. error : {}", ExceptionUtils.getRootCauseMessage(e));
+            throw new PaymentException("微信WAP支付失败", IErrorCode.PAYMENT_ERROR);
         } catch (Exception e) {
-            log.error("【WeChartWapPay】 invoke pay failed. error : {}", ExceptionUtils.getRootCauseMessage(e));
-            throw new PaymentException("微信支付失败", IErrorCode.SYSTEM_ERROR);
+            log.error("【WeChartWapPay】 invoke wap pay failed. error : {}", ExceptionUtils.getRootCauseMessage(e));
+            throw new PaymentException("微信WAP支付失败", IErrorCode.SYSTEM_ERROR);
         }
     }
 

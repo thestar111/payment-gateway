@@ -1,6 +1,6 @@
-package com.bluetoop.payment.core.exception;
+package com.bluetoop.payment.core.cons;
 
-import com.bluetoop.payment.core.error.IErrorCode;
+import com.bluetoop.payment.core.cons.IErrorCode;
 import lombok.Getter;
 import lombok.Setter;
 

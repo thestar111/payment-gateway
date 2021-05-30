@@ -18,8 +18,10 @@ public class ProductInfo implements Serializable {
 
     /** 产品ID */
     private String productId;
+
     /** 产品名称 */
     private String productName;
+
     /** 产品描述 */
     private String body;
 }

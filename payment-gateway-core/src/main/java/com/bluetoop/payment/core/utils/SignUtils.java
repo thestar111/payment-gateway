@@ -13,7 +13,7 @@ import cn.hutool.core.util.CharsetUtil;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.crypto.SecureUtil;
 import cn.hutool.crypto.digest.HmacAlgorithm;
-import com.bluetoop.payment.core.type.SignType;
+import com.bluetoop.payment.core.cons.type.SignType;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;

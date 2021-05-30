@@ -2,7 +2,7 @@ package com.bluetoop.payment.provider.test;
 
 import com.bluetoop.payment.api.test.TestFacade;
 import com.bluetoop.payment.core.common.Result;
-import com.bluetoop.payment.core.type.PrintLog;
+import com.bluetoop.payment.core.cons.type.PrintLog;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 

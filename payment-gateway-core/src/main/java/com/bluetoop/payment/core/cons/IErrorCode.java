@@ -1,4 +1,4 @@
-package com.bluetoop.payment.core.error;
+package com.bluetoop.payment.core.cons;
 
 
 import lombok.Getter;
@@ -14,21 +14,20 @@ import lombok.Getter;
  */
 @Getter
 public enum IErrorCode {
-    /**
-     * 成功
-     */
+
+    /** 成功 */
     SUCCESS(0, "SUCCESS."),
-    /**
-     * 系统异常
-     */
+
+    /** 系统异常 */
     SYSTEM_ERROR(9999, "System error."),
-    /**
-     * 支付异常
-     */
+
+    /** 微信支付异常 */
+    WX_PAY_ERROR(99999, "WeChart Pay error."),
+
+    /** 支付异常 */
     PAYMENT_ERROR(1001, "pay error."),
-    /**
-     * 支付异常
-     */
+
+    /** 支付异常 */
     INVALID_PARAMS_ERROR(1002, "invalid params.");
 
     /**

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 
 import static com.bluetoop.payment.core.cons.Constans.TRANCE_ID;
-import static com.bluetoop.payment.core.type.RequestHeader.*;
+import static com.bluetoop.payment.core.cons.type.RequestHeader.*;
 
 /**
  * <消息统一处理>

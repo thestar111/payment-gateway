@@ -7,6 +7,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -30,6 +31,7 @@ public class WxPayConfiguration {
      */
     @Bean
     @ConditionalOnMissingBean
+    @ConditionalOnProperty(name = "wxpay.enable", havingValue = "true", matchIfMissing = true)
     public WxPayService wxService(@Autowired WxPayProperties wxPayProperties) {
         WxPayConfig payConfig = new WxPayConfig();
         payConfig.setAppId(StringUtils.trimToNull(wxPayProperties.getAppId()));

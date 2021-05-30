@@ -16,63 +16,48 @@ import java.io.Serializable;
 @Data
 public class PayResponse implements Serializable {
 
-    /**
-     * 外部订单编号
-     */
+    /** 外部订单编号 （商户订单号）*/
     private String outOrderNo;
 
-    /**
-     * 卖家ID
-     */
-    private String sellerId;
+    /** 微信支付订单ID */
+    private String transactionId;
 
-    /**
-     * 订单ID
-     */
-    private String tradeNo;
-
-    /**
-     * 返回体
-     */
-    private String body;
-
-    /**
-     * 公众号ID
-     */
+    /** 公众号ID */
     private String appId;
 
-    /**
-     * 时间戳
-     */
+    /** 账户微信OpenID */
+    private String openId;
+
+    /** 时间戳 */
     private String timeStamp;
 
-    /**
-     * 随机字符串
-     */
+    /** 随机字符串 */
     private String nonceStr;
 
-    /**
-     * 预支付ID
-     */
+    /** 预支付ID */
     private String prepayId;
 
-    /**
-     * 签名类型（默认：SHA1 新版本：MD5）
-     */
+    /** 签名类型（默认：SHA1 新版本：MD5） */
     private String signType;
 
-    /**
-     * 签名
-     */
+    /** 签名 */
     private String sign;
 
-    /**
-     * 二维码连接（Native支付）
-     */
-    private String codeUrl;
-
-    /**
-     * 支付跳转连接（H5支付需要）
-     */
+    /** 支付跳转连接（H5支付需要） */
     private String mwebUrl;
+
+    /** 交易类型 @{linkp} TradeType */
+    private String tradeType;
+
+    /** 交易完成时间 */
+    private String endTime;
+
+    /** 支付方式 */
+    private String bankType;
+
+    /** 总金额 */
+    private Integer totalFee;
+
+    /** 代金券金额 */
+    private Integer couponFee;
 }

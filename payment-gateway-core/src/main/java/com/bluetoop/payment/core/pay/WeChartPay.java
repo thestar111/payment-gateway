@@ -1,14 +1,14 @@
 package com.bluetoop.payment.core.pay;
 
 import cn.hutool.json.JSONUtil;
-import com.bluetoop.payment.core.error.IErrorCode;
-import com.bluetoop.payment.core.exception.PaymentException;
+import com.bluetoop.payment.core.cons.IErrorCode;
+import com.bluetoop.payment.core.cons.PaymentException;
 import com.bluetoop.payment.core.pay.request.WxPayRequest;
 import com.bluetoop.payment.core.storage.LocalConfigStorage;
 import com.bluetoop.payment.core.strategy.PayStrategy;
 import com.bluetoop.payment.core.strategy.request.PayRequest;
 import com.bluetoop.payment.core.strategy.response.PayResponse;
-import com.bluetoop.payment.core.type.PayType;
+import com.bluetoop.payment.core.cons.type.PayType;
 import com.bluetoop.payment.core.utils.StringUtil;
 import com.github.binarywang.wxpay.bean.order.WxPayMpOrderResult;
 import com.github.binarywang.wxpay.constant.WxPayConstants;
@@ -18,7 +18,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import static com.bluetoop.payment.core.type.Device.WEB;
+import static com.bluetoop.payment.core.cons.type.Device.WEB;
 import static com.github.binarywang.wxpay.constant.WxPayConstants.TradeType.JSAPI;
 
 /**
@@ -78,11 +78,12 @@ public class WeChartPay extends PayStrategy<PayRequest, PayResponse> {
                 return payResponse;
             } else {
                 // 微信支付失败
-                throw new RuntimeException("微信支付失败");
+                // 微信支付失败
+                throw new PaymentException("微信公众号统一支付失败", IErrorCode.WX_PAY_ERROR);
             }
         } catch (WxPayException e) {
             log.error("【WeChartPay】 invoke jsapi pay failed. ====================<<<< error : {}", ExceptionUtils.getRootCauseMessage(e));
-            throw new PaymentException("微信支付失败", IErrorCode.PAYMENT_ERROR);
+            throw new PaymentException("微信公众号统一支付失败", IErrorCode.PAYMENT_ERROR);
         }
     }
 

@@ -2,7 +2,7 @@ package com.bluetoop.payment.provider.oauth;
 
 import com.bluetoop.payment.api.oauth.OAuthFacade;
 import com.bluetoop.payment.core.config.WxMpConfig;
-import com.bluetoop.payment.core.type.PrintLog;
+import com.bluetoop.payment.core.cons.type.PrintLog;
 import com.bluetoop.payment.core.utils.StringUtil;
 import lombok.extern.slf4j.Slf4j;
 import me.chanjar.weixin.common.error.WxErrorException;
@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.net.URLEncoder;
 
-import static com.bluetoop.payment.core.type.OAuthType.SNS_BASE_INFO;
+import static com.bluetoop.payment.core.cons.type.OAuthType.SNS_BASE_INFO;
 
 /**
  * <微信授权网页服务>

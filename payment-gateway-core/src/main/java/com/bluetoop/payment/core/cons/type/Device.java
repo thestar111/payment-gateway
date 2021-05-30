@@ -7,7 +7,7 @@
  * 修改单号:  <修改单号>
  * 修改内容:  <修改内容>
  */
-package com.bluetoop.payment.core.type;
+package com.bluetoop.payment.core.cons.type;
 
 /**
  * <设备号>

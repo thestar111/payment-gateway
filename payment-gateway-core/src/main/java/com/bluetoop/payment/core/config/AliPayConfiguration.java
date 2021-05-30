@@ -3,6 +3,7 @@ package com.bluetoop.payment.core.config;
 import com.alipay.api.AlipayClient;
 import com.alipay.api.DefaultAlipayClient;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -25,6 +26,7 @@ public class AliPayConfiguration {
      * @return
      */
     @Bean
+    @ConditionalOnProperty(name = "alipay.enable", havingValue = "true", matchIfMissing = true)
     public AlipayClient alipayClient(@Autowired AliPayProperties aliPayProperties) {
         // 实例化支付宝支付客户端
         AlipayClient alipayClient = new DefaultAlipayClient(aliPayProperties.getGatewayUrl(),

@@ -1,4 +1,4 @@
-package com.bluetoop.payment.core.type;
+package com.bluetoop.payment.core.cons.type;
 
 import lombok.Getter;
 
